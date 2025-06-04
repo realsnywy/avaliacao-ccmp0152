@@ -43,7 +43,7 @@ README.md
 1. Clone este repositório:
 
    ```sh
-   git clone https://github.com/seu-usuario/avaliacao-ccmp0152.git
+   git clone https://github.com/realsnywy/avaliacao-ccmp0152.git
    cd avaliacao-ccmp0152
    ```
 
