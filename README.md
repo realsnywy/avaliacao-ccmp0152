@@ -2,8 +2,6 @@
 
 Projeto de banco de dados para gestão financeira empresarial - Avaliação II da disciplina Banco de Dados I (CCMP0152).
 
----
-
 ## Estrutura do Projeto
 
 ```
@@ -22,16 +20,12 @@ src/
 README.md
 ```
 
----
-
 ## Scripts
 
 - **V1__modelagem.sql:** Criação das tabelas e definição de chaves.
 - **V2__alteracoes.sql:** Alterações estruturais, como adição de colunas e alteração de tipos.
 - **V3__manipulacao.sql:** Inserção, atualização e remoção de dados conforme solicitado.
 - **V4__consulta1.sql a V8__consulta5.sql:** Consultas SQL para geração dos relatórios e análises exigidas.
-
----
 
 ## Como Executar
 
@@ -55,8 +49,6 @@ README.md
 
 3. **Documentação:**
    Consulte o arquivo `docs/documentacao.md` para detalhes sobre o modelo e as decisões do projeto.
-
----
 
 ## Objetivo
 
