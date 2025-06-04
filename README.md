@@ -2,7 +2,11 @@
 
 Projeto de banco de dados para gestão financeira empresarial - Avaliação II da disciplina Banco de Dados I (CCMP0152).
 
-## Estrutura do Projeto
+## 🎯 Objetivo
+
+Desenvolver um banco de dados para controle financeiro empresarial, permitindo o registro detalhado de despesas e receitas, além da geração de relatórios gerenciais via SQL.
+
+## 📁 Estrutura do Projeto
 
 ```
 docs/
@@ -20,40 +24,42 @@ src/
 README.md
 ```
 
-## Scripts
+## 📜 Scripts
 
-- **V1__modelagem.sql:** Criação das tabelas e definição de chaves.
-- **V2__alteracoes.sql:** Alterações estruturais, como adição de colunas e alteração de tipos.
+- **V1__modelagem.sql:** Criação das tabelas e definição de chaves primárias e estrangeiras.
+- **V2__alteracoes.sql:** Alterações estruturais, como adição de colunas, índices e alteração de tipos.
 - **V3__manipulacao.sql:** Inserção, atualização e remoção de dados conforme solicitado.
 - **V4__consulta1.sql a V8__consulta5.sql:** Consultas SQL para geração dos relatórios e análises exigidas.
 
-## Como Executar
+## 🚀 Como Executar
 
-1. **Pré-requisitos:**
-   - SGBD compatível com SQL (ex: PostgreSQL, MySQL, SQLite).
-   - Ferramenta para execução de scripts SQL (ex: DBeaver, psql, MySQL Workbench).
+### 1. Pré-requisitos
 
-2. **Passos:**
-   1. Clone este repositório:
+- SGBD compatível com SQL (ex: PostgreSQL, MySQL, SQLite).
+- Ferramenta para execução de scripts SQL (ex: DBeaver, psql, MySQL Workbench).
 
-      ```sh
-      git clone https://github.com/seu-usuario/avaliacao-ccmp0152.git
-      cd avaliacao-ccmp0152
-      ```
+### 2. Passos
 
-   2. Execute os scripts na seguinte ordem, dentro de `src/queries/`:
-      - `V1__modelagem.sql`
-      - `V2__alteracoes.sql`
-      - `V3__manipulacao.sql`
-      - `V4__consulta1.sql` até `V8__consulta5.sql` para os relatórios.
+1. Clone este repositório:
 
-3. **Documentação:**
-   Consulte o arquivo `docs/documentacao.md` para detalhes sobre o modelo e as decisões do projeto.
+   ```sh
+   git clone https://github.com/seu-usuario/avaliacao-ccmp0152.git
+   cd avaliacao-ccmp0152
+   ```
 
-## Objetivo
+2. Execute os scripts na seguinte ordem, dentro de `src/queries/`:
 
-Desenvolver um banco de dados para controle financeiro empresarial, permitindo o registro detalhado de despesas e receitas, além da geração de relatórios gerenciais via SQL.
+   1. `V1__modelagem.sql`
+   2. `V2__alteracoes.sql`
+   3. `V3__manipulacao.sql`
+   4. `V4__consulta1.sql` até `V8__consulta5.sql` para os relatórios.
+
+   **Dica:** Certifique-se de executar cada script apenas após o anterior ter sido concluído com sucesso.
+
+### 3. Documentação
+
+Consulte o arquivo [`docs/documentacao.md`](docs/documentacao.md) para detalhes sobre o modelo de dados, decisões de projeto e exemplos de uso.
 
 ---
 
-> Projeto acadêmico para fins de estudo na disciplina Banco de Dados I. Não recomendado para uso em produção.
+> Projeto acadêmico para fins de estudo na disciplina Banco de Dados I (CCMP0152).
