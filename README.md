@@ -12,15 +12,15 @@ Desenvolver um banco de dados para controle financeiro empresarial, permitindo o
 docs/
  └── documentacao.md         # Documentação complementar e explicações
 src/
+ ├── V1__modelagem.sql           # Criação das tabelas e modelagem (DDL)
+ ├── V2__alteracoes.sql          # Alterações estruturais (DDL)
+ ├── V3__manipulacao.sql         # Manipulação de dados (DML)
  └── queries/
-      ├── V1__modelagem.sql      # Criação das tabelas e modelagem (DDL)
-      ├── V2__alteracoes.sql     # Alterações estruturais (DDL)
-      ├── V3__manipulacao.sql    # Manipulação de dados (DML)
-      ├── V4__consulta1.sql      # Consultas: relatórios por equipamentos
-      ├── V5__consulta2.sql      # Consultas: receitas por obras
-      ├── V6__consulta3.sql      # Consultas: projeção de despesas
-      ├── V7__consulta4.sql      # Consultas: contas em atraso
-      └── V8__consulta5.sql      # Consultas: saldo atual das contas
+   ├── V4__consulta1.sql      # Consultas: relatórios por equipamentos
+   ├── V5__consulta2.sql      # Consultas: receitas por obras
+   ├── V6__consulta3.sql      # Consultas: projeção de despesas
+   ├── V7__consulta4.sql      # Consultas: contas em atraso
+   └── V8__consulta5.sql      # Consultas: saldo atual das contas
 README.md
 ```
 
