@@ -1,3 +1,5 @@
+-- Usa o banco de dados
+USE avaliacao;
 -- Inserir formas de pagamento
 INSERT INTO FormaPagamento (nome)
 VALUES ('PIX'),

@@ -1,3 +1,5 @@
+-- Usa o banco de dados
+USE avaliacao;
 -- a) Próximo trimestre
 SELECT SUM(valor) AS despesas_trimestre
 FROM ContaPagar

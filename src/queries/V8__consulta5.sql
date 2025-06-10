@@ -1,3 +1,5 @@
+-- Usa o banco de dados
+USE avaliacao;
 SELECT cc.apelido,
   (
     cc.saldo_inicial + IFNULL(

@@ -1,3 +1,5 @@
+-- Usa o banco de dados
+USE avaliacao;
 SELECT cp.*,
   sp.assunto,
   f.nome_fantasia AS fornecedor

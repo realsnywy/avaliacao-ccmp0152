@@ -1,3 +1,5 @@
+-- Usa o banco de dados
+USE avaliacao;
 -- a) Total de despesas efetivadas por equipamento
 SELECT e.nome,
   SUM(cp.valor) AS total_despesas

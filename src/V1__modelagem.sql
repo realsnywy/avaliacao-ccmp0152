@@ -1,33 +1,36 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS avaliacao;
+USE avaliacao;
 -- Criação das tabelas principais
-CREATE TABLE Fornecedor (
+CREATE TABLE IF NOT EXISTS Fornecedor (
   id_fornecedor INT PRIMARY KEY AUTO_INCREMENT,
   cnpj VARCHAR(14) NOT NULL UNIQUE,
   razao_social VARCHAR(100) NOT NULL,
   nome_fantasia VARCHAR(100)
 );
-CREATE TABLE Equipamento (
+CREATE TABLE IF NOT EXISTS Equipamento (
   id_equipamento INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL,
   placa VARCHAR(20),
   patrimonio VARCHAR(50),
   renavam VARCHAR(50)
 );
-CREATE TABLE Obra (
+CREATE TABLE IF NOT EXISTS Obra (
   id_obra INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(100) NOT NULL
 );
-CREATE TABLE Categoria (
+CREATE TABLE IF NOT EXISTS Categoria (
   id_categoria INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   tipo ENUM('Despesa', 'Receita') NOT NULL
 );
-CREATE TABLE Subcategoria (
+CREATE TABLE IF NOT EXISTS Subcategoria (
   id_subcategoria INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   id_categoria INT NOT NULL,
   FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
 );
-CREATE TABLE ContaCorrente (
+CREATE TABLE IF NOT EXISTS ContaCorrente (
   id_conta INT PRIMARY KEY AUTO_INCREMENT,
   banco VARCHAR(50) NOT NULL,
   apelido VARCHAR(50) NOT NULL,
@@ -35,11 +38,11 @@ CREATE TABLE ContaCorrente (
   agencia VARCHAR(20) NOT NULL,
   saldo_inicial DECIMAL(10, 2) NOT NULL
 );
-CREATE TABLE FormaPagamento (
+CREATE TABLE IF NOT EXISTS FormaPagamento (
   id_forma_pagamento INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL
 );
-CREATE TABLE SolicitacaoPagamento (
+CREATE TABLE IF NOT EXISTS SolicitacaoPagamento (
   id_solicitacao INT PRIMARY KEY AUTO_INCREMENT,
   data_solicitacao DATE NOT NULL,
   assunto VARCHAR(100) NOT NULL,
@@ -59,7 +62,7 @@ CREATE TABLE SolicitacaoPagamento (
   FOREIGN KEY (id_obra) REFERENCES Obra(id_obra),
   FOREIGN KEY (id_fornecedor) REFERENCES Fornecedor(id_fornecedor)
 );
-CREATE TABLE ContaPagar (
+CREATE TABLE IF NOT EXISTS ContaPagar (
   id_conta_pagar INT PRIMARY KEY AUTO_INCREMENT,
   valor DECIMAL(10, 2) NOT NULL,
   id_forma_pagamento INT NOT NULL,
@@ -71,7 +74,7 @@ CREATE TABLE ContaPagar (
   FOREIGN KEY (id_solicitacao) REFERENCES SolicitacaoPagamento(id_solicitacao),
   FOREIGN KEY (id_conta) REFERENCES ContaCorrente(id_conta)
 );
-CREATE TABLE Receita (
+CREATE TABLE IF NOT EXISTS Receita (
   id_receita INT PRIMARY KEY AUTO_INCREMENT,
   id_conta INT NOT NULL,
   id_forma_pagamento INT NOT NULL,
