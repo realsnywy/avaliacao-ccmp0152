@@ -1,4 +1,3 @@
--- Usa o banco de dados
 USE avaliacao;
 SELECT o.nome AS obra,
   SUM(r.valor) AS total_receita
