@@ -1,23 +1,25 @@
--- Usa o banco de dados
+-- V8__consulta5.sql
+-- Consultas SQL: Outras Consultas
 USE avaliacao;
-SELECT cc.apelido,
-  (
-    cc.saldo_inicial + IFNULL(
-      (
-        SELECT SUM(r.valor)
-        FROM Receita r
-        WHERE r.id_conta = cc.id_conta
-          AND r.status = 'pago'
-      ),
-      0
-    ) - IFNULL(
-      (
-        SELECT SUM(cp.valor)
-        FROM ContaPagar cp
-        WHERE cp.id_conta = cc.id_conta
-          AND cp.status = 'paga'
-      ),
-      0
-    )
-  ) AS saldo_atual
-FROM ContaCorrente cc;
+-- Garante que as consultas sejam feitas no banco de dados correto
+-- 5. Mostre o apelido da conta e o saldo atual, considerando todas as receitas e despesas.
+SELECT cc.Apelido AS ApelidoConta,
+  cc.SaldoInicial + COALESCE(
+    (
+      SELECT SUM(r.Valor)
+      FROM Receita r
+      WHERE r.ContaCorrenteID = cc.ContaCorrenteID
+        AND r.Situacao = 'pago'
+    ),
+    0
+  ) - COALESCE(
+    (
+      SELECT SUM(cp.ValorPago)
+      FROM ContasAPagar cp
+      WHERE cp.ContaCorrenteUtilizadaID = cc.ContaCorrenteID
+        AND cp.Status = 'paga'
+    ),
+    0
+  ) AS SaldoAtual
+FROM ContaCorrente cc
+ORDER BY ApelidoConta;
